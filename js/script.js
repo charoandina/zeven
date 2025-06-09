@@ -10,23 +10,26 @@ function goToSection(sectionId) {
 /* FORM */
 
 $(document).ready(function () {
-  var form = $("#contact-form");
-  var responseContainer = $("#form-response");
+  let form = document.getElementById("contact-form");
+  let responseContainer = document.getElementById("form-response");
 
-  if (form.length === 0) {
+  if (!form) {
     console.error("El formulario no se encontró en el DOM.");
     return;
   }
 
-  form.on("submit", function (event) {
+  form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    var formData = form.serialize();
+    let formData = new FormData(form);
+    formData.append("action", "enviar_formulario");
 
     $.ajax({
       url: "procesar_formulario.php",
       type: "POST",
       data: formData,
+      processData: false,
+      contentType: false,
       success: function (response) {
         responseContainer
           .html(response)
