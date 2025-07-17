@@ -124,6 +124,41 @@ header{
     letter-spacing: .5px;
 }
 
+.hero-button-container, .form-button-container{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.arrow-icon {
+  position: absolute;
+  left: 90%; /* A la derecha del botón */
+  top: 70%;
+  margin-left: 10px;
+    transform: translate(-10px, -50%);
+  height: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+.hero-button-container:hover .arrow-icon, .form-button-container:hover .arrow-form-icon {
+  opacity: 1;
+    transform: translate(0, -60%); /* Rotación al pasar el cursor */
+}
+
+.arrow-form-icon {
+  position: absolute;
+  left: 90%; /* A la derecha del botón */
+  top: 55%;
+  margin-left: 10px;
+    transform: translate(-10px, -50%);
+  height: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
 .hero-button {
     display: flex;
     padding: 10px 20px;
@@ -184,7 +219,7 @@ header{
 
 .first-content{
     display: flex;
-    align-items: center;
+    align-items: stretch;
     width: 1151px;
     margin: 100px auto auto auto;
     gap: 30px;
@@ -416,6 +451,28 @@ header{
     height: auto;
 }
 
+.button-container {
+  position: relative;
+  display: inline-block;
+}
+
+.pdf-icon {
+  position: absolute;
+  left: 90%; 
+  top: 50%;
+  transform: translateY(20px);
+  margin-left: 10px;
+  height: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+.button-container:hover .pdf-icon {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
 .project-item-info button{
     width: 519px;
     height: 50px;
@@ -429,7 +486,6 @@ header{
 }
 .project-item-info button:hover{
     background: var(--primary-color);
-    box-shadow: 4px 6px 0px 0px var(--secondary-color);
     color: var(--secondary-color);
 }
 
@@ -592,12 +648,12 @@ footer{
 }
 
 .footer-item img{
-    width: 88px;
-    height: 88px;
+    width: 68px;
+    height: 68px;
 }
 
 .footer-development img{
-    width: 92px;
+    width: 72px;
 }
 
 .footer-item-info{
@@ -616,3 +672,4 @@ footer{
     flex-direction: column;
     gap: 20px;
 }
+
