@@ -393,6 +393,7 @@ header.menu-open {
     width: 100%;
     justify-content: center;
     margin: 30px auto auto auto;
+    gap: 15px;
     }
     .title{
         font-size: 32px;
@@ -717,8 +718,7 @@ header.menu-open {
         transition: width 0.3s ease;
     }
     .first-item-mobile{
-        width: 50%;
-
+        width: calc(100% / 2);
     }
     .first-item-image-mobile{
         width: 213px;
@@ -726,7 +726,7 @@ header.menu-open {
     }
     .first-item-image-mobile img{
         width: 100%;
-        height: auto;
+        height: 311px;
     }
     .first-item-info-mobile{
         display: flex;
