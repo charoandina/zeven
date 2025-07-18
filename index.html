@@ -18,20 +18,33 @@
 <!--HERO SECTION-->
 <div class="hero-container" id="home">
     <header>
-        <div class="header-container">
-            <img src="img/logo-zeven.svg" alt="">
-            <div class="header-links">
-                <ul class="header-list bricolage-grotesque-medium">
-                    <li onclick="goToSection('home')">Home</li>
-                    <li onclick="goToSection('services')">Servicios</li>
-                    <li onclick="goToSection('about')">Sobre Nosotros</li>
-                    <li onclick="goToSection('projects')">Proyectos</li>
-                </ul>
-            </div>
+    <div class="header-container">
+        <img src="img/logo-zeven.webp" alt="Logo Zeven" class="logo">
+
+        <!-- Botón hamburguesa -->
+        <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
         </div>
-        <button class="bricolage-grotesque-medium header-button" onclick="goToSection('contact')">Contactanos</button>
+    </div>
+
+    <!-- Links del menú: abajo del contenedor principal -->
+    <div class="header-links" id="nav-menu">
+        <ul class="header-list bricolage-grotesque-medium">
+        <li onclick="goToSection('home')">Home</li>
+        <li onclick="goToSection('services')">Servicios</li>
+        <li onclick="goToSection('about')">Sobre Nosotros</li>
+        <li onclick="goToSection('projects')">Proyectos</li>
+        </ul>
+    </div>
+
+    <button class="bricolage-grotesque-medium header-button" onclick="goToSection('contact')">
+        Contactanos
+    </button>
     </header>
 
+    <!--HERO CONTENT-->
     <div class="hero-content">
         <div class="hero-text">
             <h2 class="urbanist-medium">Tu <span class="italic-blue">visión</span>, nuestra <span class="italic-blue">misión</span>: hacerla <span class="italic-blue">realidad</span>.</h2>
@@ -86,13 +99,15 @@
 <div class="second-wrapper" id="about">
     <div class="second-container">
         <div class="second-image">
-            <img src="img/about-us.webp" alt="">
-            <div class="corner top-left"></div>
-            <div class="corner bottom-right"></div>
+            <img src="img/about-us.webp" alt="" class="aboutimg">
+            <div class="corner top-left aboutimg" ></div>
+            <div class="corner bottom-right aboutimg"></div>
+
         </div>
         <div class="second-info">
             <div class="second-text">
                 <h3 class="urbanist-extrabold title">Sobre Nosotros</h3>
+                <img src="img/aboutus-mobile.webp" alt="" class="aboutimg-mobile">
                 <p class="bricolage-grotesque-regular">En Zeven nos dedicamos a brindar soluciones integrales de construcción, acompañando a nuestros clientes desde la idea inicial hasta la entrega final. Combinamos experiencia, compromiso y una mirada innovadora para hacer realidad proyectos funcionales, eficientes y sostenibles.</p>
                 <p class="bricolage-grotesque-regular">Nuestra filosofía se basa en la excelencia operativa, el trato cercano y el cumplimiento de cada etapa con responsabilidad. Trabajamos con un equipo multidisciplinario que prioriza tanto los resultados como la experiencia del cliente.</p>
             </div>
@@ -274,8 +289,296 @@
                 <img src="img/virreyloreto-main.webp" alt="">
             </div>
         </div>
+
+        <!--ALVAREZ THOMAS-->
+        <div class="blue-background">
+            <div class="project-item">
+                <div class="project-item-image">
+                    <img src="img/alvarezthomas-main.webp" alt="">
+                </div>
+                <div class="project-item-info">
+                    <div class="project-item-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <mask id="mask0_100_144" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                                <rect width="32" height="32" fill="#D9D9D9"/>
+                            </mask>
+                            <g mask="url(#mask0_100_144)">
+                                <path d="M16 16.0003C16.7334 16.0003 17.3612 15.7392 17.8834 15.217C18.4056 14.6948 18.6667 14.067 18.6667 13.3337C18.6667 12.6003 18.4056 11.9725 17.8834 11.4503C17.3612 10.9281 16.7334 10.667 16 10.667C15.2667 10.667 14.6389 10.9281 14.1167 11.4503C13.5945 11.9725 13.3334 12.6003 13.3334 13.3337C13.3334 14.067 13.5945 14.6948 14.1167 15.217C14.6389 15.7392 15.2667 16.0003 16 16.0003ZM16 25.8003C18.7112 23.3114 20.7223 21.0503 22.0334 19.017C23.3445 16.9837 24 15.1781 24 13.6003C24 11.1781 23.2278 9.19477 21.6834 7.65033C20.1389 6.10588 18.2445 5.33366 16 5.33366C13.7556 5.33366 11.8612 6.10588 10.3167 7.65033C8.77226 9.19477 8.00004 11.1781 8.00004 13.6003C8.00004 15.1781 8.6556 16.9837 9.96671 19.017C11.2778 21.0503 13.2889 23.3114 16 25.8003ZM16 29.3337C12.4223 26.2892 9.75004 23.4614 7.98337 20.8503C6.21671 18.2392 5.33337 15.8225 5.33337 13.6003C5.33337 10.267 6.4056 7.61144 8.55004 5.63366C10.6945 3.65588 13.1778 2.66699 16 2.66699C18.8223 2.66699 21.3056 3.65588 23.45 5.63366C25.5945 7.61144 26.6667 10.267 26.6667 13.6003C26.6667 15.8225 25.7834 18.2392 24.0167 20.8503C22.25 23.4614 19.5778 26.2892 16 29.3337Z" fill="#F3F8FF"/>
+                            </g>
+                            </svg>
+                        <p class="urbanist-semibold white-p">Av. Álvarez Thomas 1695,</p>
+                    </div>
+                    <p class="urbanist-regular location white-p">Villa Ortuzar, CABA</p>
+                    <p class="urbanist-medium project-info white-p">Los tipos de edificaciones, como apartamentos, condominios, residencias, torres, bloques y complejos de viviendas, se caracterizan por un diseño moderno, lujoso y sostenible, con espacios amplios, luminosos y abiertos, grandes ventanas, fachadas de vidrio y arquitectura ecológica. Ubicados en entornos urbanos con vistas al horizonte, estos proyectos incluyen amenidades como terrazas, balcones, jardines, soláriums, ascensores, vestíbulos y estacionamientos subterráneos. </p>
+                    <div class="project-item-images">
+                        <img src="img/aviles1.webp" alt="">
+                        <img src="img/aviles2.webp" alt="">
+                        <img src="img/aviles3.webp" alt="">
+                    </div>
+                    <div class="button-container">
+                        <button class="bricolage-grotesque-regular">Ver Información</button>
+                        <img src="img/white-pdf-icon.png" alt="" class="pdf-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
+
+    <!--MOBILE VERSION-->
+    <div class="project-wrapper-mobile">
+
+        <!--BURELA / ZABALA-->
+        <div class="project-item-mobile">
+            <div class="first-item-mobile">
+                <div class="first-item-image-mobile">
+                    <img src="img/burela-mobile.webp" alt="">
+                </div>
+                <div class="first-item-info-mobile">
+                    <div class="first-item-header-mobile">
+                        <div class="first-item-header-svg-mobile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                            <mask id="mask0_100_150" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                                <rect width="32" height="32" fill="#D9D9D9"/>
+                            </mask>
+                            <g mask="url(#mask0_100_150)">
+                                <path d="M16 16.0003C16.7333 16.0003 17.3611 15.7392 17.8833 15.217C18.4055 14.6948 18.6666 14.067 18.6666 13.3337C18.6666 12.6003 18.4055 11.9725 17.8833 11.4503C17.3611 10.9281 16.7333 10.667 16 10.667C15.2666 10.667 14.6389 10.9281 14.1166 11.4503C13.5944 11.9725 13.3333 12.6003 13.3333 13.3337C13.3333 14.067 13.5944 14.6948 14.1166 15.217C14.6389 15.7392 15.2666 16.0003 16 16.0003ZM16 25.8003C18.7111 23.3114 20.7222 21.0503 22.0333 19.017C23.3444 16.9837 24 15.1781 24 13.6003C24 11.1781 23.2278 9.19477 21.6833 7.65033C20.1389 6.10588 18.2444 5.33366 16 5.33366C13.7555 5.33366 11.8611 6.10588 10.3166 7.65033C8.7722 9.19477 7.99998 11.1781 7.99998 13.6003C7.99998 15.1781 8.65554 16.9837 9.96665 19.017C11.2778 21.0503 13.2889 23.3114 16 25.8003ZM16 29.3337C12.4222 26.2892 9.74998 23.4614 7.98331 20.8503C6.21665 18.2392 5.33331 15.8225 5.33331 13.6003C5.33331 10.267 6.40554 7.61144 8.54998 5.63366C10.6944 3.65588 13.1778 2.66699 16 2.66699C18.8222 2.66699 21.3055 3.65588 23.45 5.63366C25.5944 7.61144 26.6666 10.267 26.6666 13.6003C26.6666 15.8225 25.7833 18.2392 24.0166 20.8503C22.25 23.4614 19.5778 26.2892 16 29.3337Z" fill="#02033B"/>
+                            </g>
+                        </svg>  
+                        <p class="urbanist-semibold">Burela 3055</p>
+                        </div>
+                        <p class="urbanist-regular location-mobile">Villa Urquiza, CABA</p>
+                    </div>
+                    <div class="first-item-svg-mobile">
+                        <img src="img/arrow-projects-mobile.webp" alt="" class="arrow-toggle" data-target="burela-info-mobile">
+                    </div>
+                </div>
+            </div>
+
+            <div class="first-item-mobile">
+                <div class="first-item-image-mobile">
+                    <img src="img/zabala-mobile.webp" alt="">
+                </div>
+                <div class="first-item-info-mobile">
+                    <div class="first-item-header-mobile">
+                        <div class="first-item-header-svg-mobile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                            <mask id="mask0_100_150" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                                <rect width="32" height="32" fill="#D9D9D9"/>
+                            </mask>
+                            <g mask="url(#mask0_100_150)">
+                                <path d="M16 16.0003C16.7333 16.0003 17.3611 15.7392 17.8833 15.217C18.4055 14.6948 18.6666 14.067 18.6666 13.3337C18.6666 12.6003 18.4055 11.9725 17.8833 11.4503C17.3611 10.9281 16.7333 10.667 16 10.667C15.2666 10.667 14.6389 10.9281 14.1166 11.4503C13.5944 11.9725 13.3333 12.6003 13.3333 13.3337C13.3333 14.067 13.5944 14.6948 14.1166 15.217C14.6389 15.7392 15.2666 16.0003 16 16.0003ZM16 25.8003C18.7111 23.3114 20.7222 21.0503 22.0333 19.017C23.3444 16.9837 24 15.1781 24 13.6003C24 11.1781 23.2278 9.19477 21.6833 7.65033C20.1389 6.10588 18.2444 5.33366 16 5.33366C13.7555 5.33366 11.8611 6.10588 10.3166 7.65033C8.7722 9.19477 7.99998 11.1781 7.99998 13.6003C7.99998 15.1781 8.65554 16.9837 9.96665 19.017C11.2778 21.0503 13.2889 23.3114 16 25.8003ZM16 29.3337C12.4222 26.2892 9.74998 23.4614 7.98331 20.8503C6.21665 18.2392 5.33331 15.8225 5.33331 13.6003C5.33331 10.267 6.40554 7.61144 8.54998 5.63366C10.6944 3.65588 13.1778 2.66699 16 2.66699C18.8222 2.66699 21.3055 3.65588 23.45 5.63366C25.5944 7.61144 26.6666 10.267 26.6666 13.6003C26.6666 15.8225 25.7833 18.2392 24.0166 20.8503C22.25 23.4614 19.5778 26.2892 16 29.3337Z" fill="#02033B"/>
+                            </g>
+                        </svg>  
+                        <p class="urbanist-semibold">Zabala 3240</p>
+                        </div>
+                        <p class="urbanist-regular location-mobile">Villa Urquiza, CABA</p>
+                    </div>
+                    <div class="first-item-svg-mobile">
+                        <img src="img/arrow-projects-mobile.webp" alt="" class="arrow-toggle" data-target="zabala-info-mobile">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--INFO DE BURELA MOBILE-->
+        <div id="burela-info-mobile" class="hidden mobile-project-info">
+            <div class="project-item-header-mobile">
+                <p class="bricolage-grotesque-medium">Ubicado en un terreno privilegiado entre Av. Congreso y Quesada, este proyecto ofrece un entorno verde y tranquilo con espacios exteriores amplios, jardín parquizado, piscinas y un moderno gimnasio. Cuenta con 24 unidades de 1 a 4 ambientes distribuidas en 8 pisos, con grandes balcones aterrazados, parrillas propias y terminaciones de alta calidad. En el subsuelo dispone de 6 cocheras cubiertas y bauleras para todos los departamentos.</p>
+            </div>
+            <div class="project-item-images-mobile">
+                <img src="img/burela1.webp" alt="">
+                <img src="img/burela2.webp" alt="">
+                <img src="img/burela3.webp" alt="">
+            </div>
+            <button class="bricolage-grotesque-regular button-projects-mobile">Ver Información</button>
+        </div>
+          
+
+        <!--INFO DE ZABALA MOBILE-->
+        <div id="zabala-info-mobile" class="hidden mobile-project-info">
+            <div class="project-item-header-mobile">
+                <p class="bricolage-grotesque-medium">Ubicado en uno de los barrios con mejor calidad de vida de la Ciudad de Buenos Aires, presentamos este proyecto en Colegiales, un área en pleno crecimiento que combina el encanto de sus casas bajas tradicionales con modernas torres residenciales. A pasos de Palermo y Belgrano, Colegiales ofrece un entorno tranquilo y accesible, ideal para un público joven entre 20 y 40 años que busca calidad de vida, servicios, conectividad y espacios verdes.</p>
+            </div>
+            <div class="project-item-images-mobile">
+                <img src="img/zabala1.webp" alt="">
+                <img src="img/zabala2.webp" alt="">
+                <img src="img/zabala3.webp" alt="">
+            </div>
+            <button class="bricolage-grotesque-regular button-projects-mobile">Ver Información</button>
+        </div>
+
+        
+        <!--LORETO / AVILES-->
+        <div class="project-item-mobile">
+            <div class="first-item-mobile">
+                <div class="first-item-image-mobile">
+                    <img src="img/loreto-mobile.webp" alt="">
+                </div>
+                <div class="first-item-info-mobile">
+                    <div class="first-item-header-mobile">
+                        <div class="first-item-header-svg-mobile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                            <mask id="mask0_100_150" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                                <rect width="32" height="32" fill="#D9D9D9"/>
+                            </mask>
+                            <g mask="url(#mask0_100_150)">
+                                <path d="M16 16.0003C16.7333 16.0003 17.3611 15.7392 17.8833 15.217C18.4055 14.6948 18.6666 14.067 18.6666 13.3337C18.6666 12.6003 18.4055 11.9725 17.8833 11.4503C17.3611 10.9281 16.7333 10.667 16 10.667C15.2666 10.667 14.6389 10.9281 14.1166 11.4503C13.5944 11.9725 13.3333 12.6003 13.3333 13.3337C13.3333 14.067 13.5944 14.6948 14.1166 15.217C14.6389 15.7392 15.2666 16.0003 16 16.0003ZM16 25.8003C18.7111 23.3114 20.7222 21.0503 22.0333 19.017C23.3444 16.9837 24 15.1781 24 13.6003C24 11.1781 23.2278 9.19477 21.6833 7.65033C20.1389 6.10588 18.2444 5.33366 16 5.33366C13.7555 5.33366 11.8611 6.10588 10.3166 7.65033C8.7722 9.19477 7.99998 11.1781 7.99998 13.6003C7.99998 15.1781 8.65554 16.9837 9.96665 19.017C11.2778 21.0503 13.2889 23.3114 16 25.8003ZM16 29.3337C12.4222 26.2892 9.74998 23.4614 7.98331 20.8503C6.21665 18.2392 5.33331 15.8225 5.33331 13.6003C5.33331 10.267 6.40554 7.61144 8.54998 5.63366C10.6944 3.65588 13.1778 2.66699 16 2.66699C18.8222 2.66699 21.3055 3.65588 23.45 5.63366C25.5944 7.61144 26.6666 10.267 26.6666 13.6003C26.6666 15.8225 25.7833 18.2392 24.0166 20.8503C22.25 23.4614 19.5778 26.2892 16 29.3337Z" fill="#02033B"/>
+                            </g>
+                        </svg>  
+                        <p class="urbanist-semibold">Virrey Loreto 3489</p>
+                        </div>
+                        <p class="urbanist-regular location-mobile">Colegiales, CABA</p>
+                    </div>
+                    <div class="first-item-svg-mobile">
+                        <img src="img/arrow-projects-mobile.webp" alt="" class="arrow-toggle" data-target="loreto-info-mobile">
+                    </div>
+                </div>
+            </div>
+
+            <div class="first-item-mobile">
+                <div class="first-item-image-mobile">
+                    <img src="img/aviles-mobile.webp" alt="">
+                </div>
+                <div class="first-item-info-mobile">
+                    <div class="first-item-header-mobile">
+                        <div class="first-item-header-svg-mobile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                            <mask id="mask0_100_150" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                                <rect width="32" height="32" fill="#D9D9D9"/>
+                            </mask>
+                            <g mask="url(#mask0_100_150)">
+                                <path d="M16 16.0003C16.7333 16.0003 17.3611 15.7392 17.8833 15.217C18.4055 14.6948 18.6666 14.067 18.6666 13.3337C18.6666 12.6003 18.4055 11.9725 17.8833 11.4503C17.3611 10.9281 16.7333 10.667 16 10.667C15.2666 10.667 14.6389 10.9281 14.1166 11.4503C13.5944 11.9725 13.3333 12.6003 13.3333 13.3337C13.3333 14.067 13.5944 14.6948 14.1166 15.217C14.6389 15.7392 15.2666 16.0003 16 16.0003ZM16 25.8003C18.7111 23.3114 20.7222 21.0503 22.0333 19.017C23.3444 16.9837 24 15.1781 24 13.6003C24 11.1781 23.2278 9.19477 21.6833 7.65033C20.1389 6.10588 18.2444 5.33366 16 5.33366C13.7555 5.33366 11.8611 6.10588 10.3166 7.65033C8.7722 9.19477 7.99998 11.1781 7.99998 13.6003C7.99998 15.1781 8.65554 16.9837 9.96665 19.017C11.2778 21.0503 13.2889 23.3114 16 25.8003ZM16 29.3337C12.4222 26.2892 9.74998 23.4614 7.98331 20.8503C6.21665 18.2392 5.33331 15.8225 5.33331 13.6003C5.33331 10.267 6.40554 7.61144 8.54998 5.63366C10.6944 3.65588 13.1778 2.66699 16 2.66699C18.8222 2.66699 21.3055 3.65588 23.45 5.63366C25.5944 7.61144 26.6666 10.267 26.6666 13.6003C26.6666 15.8225 25.7833 18.2392 24.0166 20.8503C22.25 23.4614 19.5778 26.2892 16 29.3337Z" fill="#02033B"/>
+                            </g>
+                        </svg>  
+                        <p class="urbanist-semibold">Virrey Avilles 2921</p>
+                        </div>
+                        <p class="urbanist-regular location-mobile">Colegiales, CABA</p>
+                    </div>
+                    <div class="first-item-svg-mobile">
+                        <img src="img/arrow-projects-mobile.webp" alt="" class="arrow-toggle" data-target="aviles-info-mobile">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+         <!--INFO DE LORETO MOBILE-->
+        <div id="loreto-info-mobile" class="hidden mobile-project-info">
+            <div class="project-item-header-mobile">
+                <p class="bricolage-grotesque-medium">Ubicado en un terreno privilegiado entre Av. Congreso y Quesada, este proyecto ofrece un entorno verde y tranquilo con espacios exteriores amplios, jardín parquizado, piscinas y un moderno gimnasio. Cuenta con 24 unidades de 1 a 4 ambientes distribuidas en 8 pisos, con grandes balcones aterrazados, parrillas propias y terminaciones de alta calidad. En el subsuelo dispone de 6 cocheras cubiertas y bauleras para todos los departamentos.</p>
+            </div>
+            <div class="project-item-images-mobile">
+                <img src="img/burela1.webp" alt="">
+                <img src="img/burela2.webp" alt="">
+                <img src="img/burela3.webp" alt="">
+            </div>
+            <button class="bricolage-grotesque-regular button-projects-mobile">Ver Información</button>
+        </div>
+          
+
+        <!--INFO DE AVILES MOBILE-->
+        <div id="aviles-info-mobile" class="hidden mobile-project-info">
+            <div class="project-item-header-mobile">
+                <p class="bricolage-grotesque-medium">Desarrollamos este proyecto en Colegiales, un barrio con una historia única. Hoy, Colegiales es uno de los barrios con mejor calidad de vida de la Ciudad de Buenos Aires, según un estudio de la Universidad de La Plata, destacándose por su entorno tranquilo y su cercanía a Palermo y Belgrano. Con una identidad que combina casas bajas tradicionales y modernas torres, el barrio mantiene su esencia residencial mientras crece y se renueva. Elegido especialmente por personas entre 20 y 40 años</p>
+            </div>
+            <div class="project-item-images-mobile">
+                <img src="img/zabala1.webp" alt="">
+                <img src="img/zabala2.webp" alt="">
+                <img src="img/zabala3.webp" alt="">
+            </div>
+            <button class="bricolage-grotesque-regular button-projects-mobile">Ver Información</button>
+        </div>
+
+
+        <!--ARREDONDO / ALVAREZ THOMAS-->
+        <div class="project-item-mobile">
+            <div class="first-item-mobile">
+                <div class="first-item-image-mobile">
+                    <img src="img/loreto-mobile.webp" alt="">
+                </div>
+                <div class="first-item-info-mobile">
+                    <div class="first-item-header-mobile">
+                        <div class="first-item-header-svg-mobile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                            <mask id="mask0_100_150" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                                <rect width="32" height="32" fill="#D9D9D9"/>
+                            </mask>
+                            <g mask="url(#mask0_100_150)">
+                                <path d="M16 16.0003C16.7333 16.0003 17.3611 15.7392 17.8833 15.217C18.4055 14.6948 18.6666 14.067 18.6666 13.3337C18.6666 12.6003 18.4055 11.9725 17.8833 11.4503C17.3611 10.9281 16.7333 10.667 16 10.667C15.2666 10.667 14.6389 10.9281 14.1166 11.4503C13.5944 11.9725 13.3333 12.6003 13.3333 13.3337C13.3333 14.067 13.5944 14.6948 14.1166 15.217C14.6389 15.7392 15.2666 16.0003 16 16.0003ZM16 25.8003C18.7111 23.3114 20.7222 21.0503 22.0333 19.017C23.3444 16.9837 24 15.1781 24 13.6003C24 11.1781 23.2278 9.19477 21.6833 7.65033C20.1389 6.10588 18.2444 5.33366 16 5.33366C13.7555 5.33366 11.8611 6.10588 10.3166 7.65033C8.7722 9.19477 7.99998 11.1781 7.99998 13.6003C7.99998 15.1781 8.65554 16.9837 9.96665 19.017C11.2778 21.0503 13.2889 23.3114 16 25.8003ZM16 29.3337C12.4222 26.2892 9.74998 23.4614 7.98331 20.8503C6.21665 18.2392 5.33331 15.8225 5.33331 13.6003C5.33331 10.267 6.40554 7.61144 8.54998 5.63366C10.6944 3.65588 13.1778 2.66699 16 2.66699C18.8222 2.66699 21.3055 3.65588 23.45 5.63366C25.5944 7.61144 26.6666 10.267 26.6666 13.6003C26.6666 15.8225 25.7833 18.2392 24.0166 20.8503C22.25 23.4614 19.5778 26.2892 16 29.3337Z" fill="#02033B"/>
+                            </g>
+                        </svg>  
+                        <p class="urbanist-semibold">Virrey Arredondo 2849</p>
+                        </div>
+                        <p class="urbanist-regular location-mobile">Colegiales, CABA</p>
+                    </div>
+                    <div class="first-item-svg-mobile">
+                        <img src="img/arrow-projects-mobile.webp" alt="" class="arrow-toggle" data-target="arredondo-info-mobile">
+                    </div>
+                </div>
+            </div>
+
+            <div class="first-item-mobile">
+                <div class="first-item-image-mobile">
+                    <img src="img/aviles-mobile.webp" alt="">
+                </div>
+                <div class="first-item-info-mobile">
+                    <div class="first-item-header-mobile">
+                        <div class="first-item-header-svg-mobile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                            <mask id="mask0_100_150" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                                <rect width="32" height="32" fill="#D9D9D9"/>
+                            </mask>
+                            <g mask="url(#mask0_100_150)">
+                                <path d="M16 16.0003C16.7333 16.0003 17.3611 15.7392 17.8833 15.217C18.4055 14.6948 18.6666 14.067 18.6666 13.3337C18.6666 12.6003 18.4055 11.9725 17.8833 11.4503C17.3611 10.9281 16.7333 10.667 16 10.667C15.2666 10.667 14.6389 10.9281 14.1166 11.4503C13.5944 11.9725 13.3333 12.6003 13.3333 13.3337C13.3333 14.067 13.5944 14.6948 14.1166 15.217C14.6389 15.7392 15.2666 16.0003 16 16.0003ZM16 25.8003C18.7111 23.3114 20.7222 21.0503 22.0333 19.017C23.3444 16.9837 24 15.1781 24 13.6003C24 11.1781 23.2278 9.19477 21.6833 7.65033C20.1389 6.10588 18.2444 5.33366 16 5.33366C13.7555 5.33366 11.8611 6.10588 10.3166 7.65033C8.7722 9.19477 7.99998 11.1781 7.99998 13.6003C7.99998 15.1781 8.65554 16.9837 9.96665 19.017C11.2778 21.0503 13.2889 23.3114 16 25.8003ZM16 29.3337C12.4222 26.2892 9.74998 23.4614 7.98331 20.8503C6.21665 18.2392 5.33331 15.8225 5.33331 13.6003C5.33331 10.267 6.40554 7.61144 8.54998 5.63366C10.6944 3.65588 13.1778 2.66699 16 2.66699C18.8222 2.66699 21.3055 3.65588 23.45 5.63366C25.5944 7.61144 26.6666 10.267 26.6666 13.6003C26.6666 15.8225 25.7833 18.2392 24.0166 20.8503C22.25 23.4614 19.5778 26.2892 16 29.3337Z" fill="#02033B"/>
+                            </g>
+                        </svg>  
+                        <p class="urbanist-semibold">Av. Álvarez Thomas 1695</p>
+                        </div>
+                        <p class="urbanist-regular location-mobile">Villa Ortuzar, CABA</p>
+                    </div>
+                    <div class="first-item-svg-mobile">
+                        <img src="img/arrow-projects-mobile.webp" alt="" class="arrow-toggle" data-target="alvarez-info-mobile">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--INFO DE ARREDONDO MOBILE-->
+        <div id="arredondo-info-mobile" class="hidden mobile-project-info">
+            <div class="project-item-header-mobile">
+                <p class="bricolage-grotesque-medium">Ubicado en un terreno privilegiado entre Av. Congreso y Quesada, este proyecto ofrece un entorno verde y tranquilo con espacios exteriores amplios, jardín parquizado, piscinas y un moderno gimnasio. Cuenta con 24 unidades de 1 a 4 ambientes distribuidas en 8 pisos, con grandes balcones aterrazados, parrillas propias y terminaciones de alta calidad. En el subsuelo dispone de 6 cocheras cubiertas y bauleras para todos los departamentos.</p>
+            </div>
+            <div class="project-item-images-mobile">
+                <img src="img/burela1.webp" alt="">
+                <img src="img/burela2.webp" alt="">
+                <img src="img/burela3.webp" alt="">
+            </div>
+            <button class="bricolage-grotesque-regular button-projects-mobile">Ver Información</button>
+        </div>
+          
+
+        <!--INFO DE ALVAREZ THOMAS MOBILE-->
+        <div id="alvarez-info-mobile" class="hidden mobile-project-info">
+            <div class="project-item-header-mobile">
+                <p class="bricolage-grotesque-medium">Los tipos de edificaciones, como apartamentos, condominios, residencias, torres, bloques y complejos de viviendas, se caracterizan por un diseño moderno, lujoso y sostenible, con espacios amplios, luminosos y abiertos, grandes ventanas, fachadas de vidrio y arquitectura ecológica. Ubicados en entornos urbanos con vistas al horizonte, estos proyectos incluyen amenidades como terrazas, balcones, jardines, soláriums, ascensores, vestíbulos y estacionamientos subterráneos.</p>
+            </div>
+            <div class="project-item-images-mobile">
+                <img src="img/zabala1.webp" alt="">
+                <img src="img/zabala2.webp" alt="">
+                <img src="img/zabala3.webp" alt="">
+            </div>
+            <button class="bricolage-grotesque-regular button-projects-mobile">Ver Información</button>
+        </div>
+
+    </div>
+
+                                
+
+                
+        
+        
+
 
 <!--CONTACTO-->
 <div class="contact-wrapper" id="contact">

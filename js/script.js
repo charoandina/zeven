@@ -7,6 +7,50 @@ function goToSection(sectionId) {
     }
 }
 
+/* HAMBURGER MENU */
+
+function toggleMenu() {
+  const navMenu = document.getElementById('nav-menu');
+  const header = document.querySelector('header');
+
+  navMenu.classList.toggle('open');
+
+  if (navMenu.classList.contains('open')) {
+    header.classList.add('menu-open');
+  } else {
+    header.classList.remove('menu-open');
+  }
+}
+
+/* MOBILE PROJECTS */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const arrows = document.querySelectorAll(".arrow-toggle");
+
+  arrows.forEach((arrow) => {
+    arrow.addEventListener("click", () => {
+      const targetId = arrow.getAttribute("data-target");
+      const targetInfo = document.getElementById(targetId);
+      const isHidden = targetInfo.classList.contains("hidden");
+
+      // Ocultar todos los info
+      document.querySelectorAll(".mobile-project-info").forEach((info) => {
+        info.classList.add("hidden");
+      });
+
+      // Resetear todas las flechas
+      arrows.forEach((a) => a.classList.remove("rotate"));
+
+      // Mostrar si estaba oculto
+      if (isHidden) {
+        targetInfo.classList.remove("hidden");
+        arrow.classList.add("rotate");
+      }
+    });
+  });
+});
+
+
 /* FORM */
 
 $(document).ready(function () {
@@ -54,3 +98,4 @@ $(document).ready(function () {
     });
   });
 });
+
